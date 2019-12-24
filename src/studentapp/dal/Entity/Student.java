@@ -14,14 +14,14 @@ public class Student
     private int sid;
     private String sname;
     private String snumber;
-    private int sage;
+    private String sage;
     private String sphone;
     private String saddress;
 
     public Student() {
     }
 
-    public Student(String sname, String snumber, int sage, String sphone, String saddress) {
+    public Student(String sname, String snumber, String sage, String sphone, String saddress) {
         this.sname = sname;
         this.snumber = snumber;
         this.sage = sage;
@@ -53,11 +53,11 @@ public class Student
         this.snumber = snumber;
     }
 
-    public int getSage() {
+    public String getSage() {
         return sage;
     }
 
-    public void setSage(int sage) {
+    public void setSage(String sage) {
         this.sage = sage;
     }
 

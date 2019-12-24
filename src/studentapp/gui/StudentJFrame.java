@@ -52,7 +52,8 @@ public class StudentJFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public StudentJFrame() {
-		setTitle("\u5B66\u751F\u7BA1\u7406");
+		setTitle("智能家居管理系统");
+//		setTitle("\u5B66\u751F\u7BA1\u7406");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 781, 611);
 		contentPane = new JPanel();
@@ -63,17 +64,17 @@ public class StudentJFrame extends JFrame {
 		
 		cols=new ArrayList<>();
         cols.add("ID");
-        cols.add("姓名");
-        cols.add("年龄");
-        cols.add("地址");
-        cols.add("学号");
-        cols.add("联系方式");       
+        cols.add("用户名");
+        cols.add("空调");
+        cols.add("窗帘");
+        cols.add("门");
+        cols.add("灯");
         studentDaoImpl=new StudentDaoImpl();
         rows=studentDaoImpl.getAllStudent();
         simpleTableModel=new SimpleTableModel<Student>(cols,rows);
     	
         JLabel jLabel = new JLabel();
-        jLabel.setText("学生管理系统");      
+        jLabel.setText("智能家居管理系统");
         jLabel.setFont(new Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel.setHorizontalAlignment(SwingConstants.CENTER);        
         getContentPane().add(jLabel, BorderLayout.PAGE_START);
@@ -210,7 +211,7 @@ public class StudentJFrame extends JFrame {
 	}
 	
 	 private void aboutActionPerformed(ActionEvent evt) {
-		 JOptionPane.showMessageDialog(this, "学生管理系统 ver 1.2.0\n\n  版权：yzb","关于学生管理系统",JOptionPane.PLAIN_MESSAGE);
+		 JOptionPane.showMessageDialog(this, "智能家居管理系统 ver 1.2.0\n\n  版权：dang","关于智能家居管理系统",JOptionPane.PLAIN_MESSAGE);
 	 }
 
 	 private void insertStudentActionPerformed(ActionEvent evt) {

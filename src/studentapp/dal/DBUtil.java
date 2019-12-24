@@ -29,7 +29,7 @@ public class DBUtil {
         try {
             
             Class.forName(driver);
-            return DriverManager.getConnection(URL, "root", "123456");
+            return DriverManager.getConnection(URL, "root", "1997");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
