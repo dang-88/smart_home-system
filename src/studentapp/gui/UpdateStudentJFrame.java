@@ -8,6 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+//import org.apache.commons.codec.binary.Base64;
+
 import com.sun.org.apache.xml.internal.security.Init;
 
 import studentapp.dal.Entity.Student;
@@ -49,7 +51,7 @@ public class UpdateStudentJFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public UpdateStudentJFrame() {
-		setTitle("\u66F4\u65B0\u5B66\u751F\u4FE1\u606F");		
+		setTitle("更新家具信息");
 		initComponents();
 	}
 
@@ -85,23 +87,23 @@ public class UpdateStudentJFrame extends JFrame {
 		contentPane.add(sphone);
 		sphone.setColumns(10);
 		
-		JLabel labelName = new JLabel("\u5B66\u751F\u59D3\u540D\uFF1A");
+		JLabel labelName = new JLabel("用户名称：");
 		labelName.setBounds(123, 69, 70, 15);
 		contentPane.add(labelName);
 		
-		JLabel labelAge = new JLabel("\u5B66\u751F\u5E74\u9F84\uFF1A");
+		JLabel labelAge = new JLabel("空调状态：");
 		labelAge.setBounds(123, 115, 70, 15);
 		contentPane.add(labelAge);
 		
-		JLabel labelAddress = new JLabel("\u5B66\u751F\u5730\u5740\uFF1A");
+		JLabel labelAddress = new JLabel("窗帘状态：");
 		labelAddress.setBounds(123, 163, 70, 15);
 		contentPane.add(labelAddress);
 		
-		JLabel labelSno = new JLabel("\u5B66\u751F\u5B66\u53F7\uFF1A");
+		JLabel labelSno = new JLabel("门的状态：");
 		labelSno.setBounds(123, 217, 70, 15);
 		contentPane.add(labelSno);
 		
-		JLabel labelPhone = new JLabel("\u5B66\u751F\u7535\u8BDD\uFF1A");
+		JLabel labelPhone = new JLabel("灯的状态：");
 		labelPhone.setBounds(123, 263, 70, 15);
 		contentPane.add(labelPhone);
 		
@@ -138,7 +140,7 @@ public class UpdateStudentJFrame extends JFrame {
 		 StudentDaoImpl studentDaoImpl=new StudentDaoImpl();
 		try {
 			student.setSname(this.sname.getText());
-			student.setSage(Integer.parseInt(this.sage.getText()));
+			student.setSage(this.sage.getText());
 			student.setSaddress(this.saddress.getText());
 			student.setSnumber(this.snumber.getText());			
 			student.setSphone(this.sphone.getText());			

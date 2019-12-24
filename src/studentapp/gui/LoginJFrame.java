@@ -54,7 +54,7 @@ public class LoginJFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public LoginJFrame() {
-		setTitle("\u767B\u9646\u5B66\u751F\u7BA1\u7406\u7CFB\u7EDF");
+		setTitle("智能家居管理系统");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		CardLayout cardLayout=new CardLayout();
@@ -165,7 +165,7 @@ public class LoginJFrame extends JFrame {
 	        }
 	        else
 	        {
-	            JOptionPane.showMessageDialog(this, "登录失败，账号或密码错误！","登陆学生管理系统",JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(this, "登录失败，账号或密码错误！","登陆智能家居管理系统",JOptionPane.ERROR_MESSAGE);
 	        }
 	}
 	private void userRegisterActionPerformed(ActionEvent event) {
@@ -177,7 +177,7 @@ public class LoginJFrame extends JFrame {
 	    	 JOptionPane.showMessageDialog(this, "注册成功");
 	     }
 	     else {
-	    	 JOptionPane.showMessageDialog(this, "注册失败!","注册学生管理系统",JOptionPane.ERROR_MESSAGE);
+	    	 JOptionPane.showMessageDialog(this, "注册失败!","注册智能家居管理系统",JOptionPane.ERROR_MESSAGE);
 	     }
 	}
 	

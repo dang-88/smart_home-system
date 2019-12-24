@@ -51,7 +51,7 @@ public class UserDaoImpl implements UserDao
 
     @Override
     public boolean certifyUser(String uname, String upassword) {
-        String select="select * from user where uname='"+uname+"' and upassword='"+upassword+"'";
+        String select="select * from manager,user where uname='"+uname+"' and upassword='"+upassword+"'";
         boolean isCertifyUser=false;
         try {
             ResultSet rs=DBUtil.runQuery(select);

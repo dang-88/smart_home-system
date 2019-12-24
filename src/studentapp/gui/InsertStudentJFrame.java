@@ -46,7 +46,7 @@ public class InsertStudentJFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public InsertStudentJFrame() {
-		setTitle("\u6DFB\u52A0\u5B66\u751F\u4FE1\u606F");
+		setTitle("添加家具信息");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 426, 460);
 		contentPane = new JPanel();
@@ -79,23 +79,23 @@ public class InsertStudentJFrame extends JFrame {
 		contentPane.add(sphone);
 		sphone.setColumns(10);
 		
-		JLabel labelName = new JLabel("\u5B66\u751F\u59D3\u540D\uFF1A");
+		JLabel labelName = new JLabel("用户名：");
 		labelName.setBounds(91, 60, 66, 15);
 		contentPane.add(labelName);
 		
-		JLabel labelAge = new JLabel("\u5B66\u751F\u5E74\u9F84\uFF1A");
+		JLabel labelAge = new JLabel("空调：");
 		labelAge.setBounds(91, 113, 66, 15);
 		contentPane.add(labelAge);
 		
-		JLabel labelAddress = new JLabel("\u5B66\u751F\u5730\u5740\uFF1A");
+		JLabel labelAddress = new JLabel("窗帘：");
 		labelAddress.setBounds(91, 155, 66, 15);
 		contentPane.add(labelAddress);
 		
-		JLabel labelSnumber = new JLabel("\u5B66\u751F\u5B66\u53F7\uFF1A");
+		JLabel labelSnumber = new JLabel("门：");
 		labelSnumber.setBounds(91, 203, 66, 15);
 		contentPane.add(labelSnumber);
 		
-		JLabel labelPhone = new JLabel("\u5B66\u751F\u7535\u8BDD\uFF1A");
+		JLabel labelPhone = new JLabel("灯：");
 		labelPhone.setBounds(91, 252, 66, 15);
 		contentPane.add(labelPhone);
 		
@@ -123,15 +123,15 @@ public class InsertStudentJFrame extends JFrame {
         StudentDaoImpl studentDaoImpl=new StudentDaoImpl();
         try {
         	student.setSname(sname.getText());
-        	student.setSage(Integer.parseInt(sage.getText()));
+        	student.setSage(sage.getText());
         	student.setSaddress(saddress.getText());
         	student.setSnumber(snumber.getText());
         	student.setSphone(sphone.getText());
 			studentDaoImpl.addStudent(student);
-			JOptionPane.showMessageDialog(this, "插入成功！","添加学生信息",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "插入成功！","添加家具信息",JOptionPane.INFORMATION_MESSAGE);
 		} catch (Exception e) {
 			// TODO: handle exception
-			JOptionPane.showMessageDialog(this, "插入失败！","添加学生信息",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "插入失败！","添加家具信息",JOptionPane.ERROR_MESSAGE);
 		}              
 	}
 	private void cancelActionPerformed(ActionEvent event) {

@@ -24,7 +24,7 @@ public class StudentDaoImpl implements StudentDao{
 
    @Override
     public boolean addStudent(Student stu) {
-        String insert = "insert into student(sname,snumber,sage,sphone,saddress) "
+        String insert = "insert into user(sname,saircon,swindow,sdoor,slight) "
                 +"values('"+stu.getSname()+"','"+stu.getSnumber()+"','"+stu.getSage()+"','"+stu.getSphone()+"','"+stu.getSaddress()+"')";
         
         try {
@@ -38,8 +38,8 @@ public class StudentDaoImpl implements StudentDao{
     
     
       public boolean updateStudent(Student stu){
-        String update="update student set sname='"+stu.getSname()+"',snumber='"+stu.getSnumber()+
-                "',sage="+stu.getSage()+",sphone='"+stu.getSphone()+"',saddress='"+stu.getSaddress()+"' where sid="+stu.getSid();
+        String update="update user set sname='"+stu.getSname()+"',saircon='"+stu.getSnumber()+
+                "',swindow="+stu.getSage()+",sdoor='"+stu.getSphone()+"',slight='"+stu.getSaddress()+"' where sid="+stu.getSid();
           System.out.println(update);
         try {
             DBUtil.runUpdate(update);
@@ -51,7 +51,7 @@ public class StudentDaoImpl implements StudentDao{
     }
 
     public boolean delStudentbyID(int id) {
-        String delete = "delete from student where sid = '"+id+"'";
+        String delete = "delete from user where sid = '"+id+"'";
         
         try {
             DBUtil.runUpdate(delete);
@@ -65,7 +65,7 @@ public class StudentDaoImpl implements StudentDao{
 
     @Override
     public Student getStudentbyID(int id) {
-        String select="select * from student where sid="+id;
+        String select="select * from user where sid="+id;
         try {
             Student student = new Student();
             ResultSet rs=DBUtil.runQuery(select);
@@ -73,10 +73,10 @@ public class StudentDaoImpl implements StudentDao{
             {
                student.setSid(rs.getInt("sid"));
                student.setSname(rs.getString("sname"));
-               student.setSnumber(rs.getString("snumber"));
-               student.setSage(rs.getInt("sage"));
-               student.setSphone(rs.getString("sphone"));
-               student.setSaddress(rs.getString("saddress"));
+               student.setSnumber(rs.getString("saircon"));
+               student.setSage(rs.getString("swindow"));
+               student.setSphone(rs.getString("sdoor"));
+               student.setSaddress(rs.getString("slight"));
             }
             DBUtil.realeaseAll();
             return student;
@@ -88,7 +88,7 @@ public class StudentDaoImpl implements StudentDao{
 
     @Override
     public Student getStudentbyNum(String snum) {
-        String select="select * from student where snumber='"+snum+"'";
+        String select="select * from user where saircon='"+snum+"'";
         try {
             Student student = new Student();
             ResultSet rs=DBUtil.runQuery(select);
@@ -96,10 +96,10 @@ public class StudentDaoImpl implements StudentDao{
             {
                student.setSid(rs.getInt("sid"));
                student.setSname(rs.getString("sname"));
-               student.setSnumber(rs.getString("snumber"));
-               student.setSage(rs.getInt("sage"));
-               student.setSphone(rs.getString("sphone"));
-               student.setSaddress(rs.getString("saddress"));
+               student.setSnumber(rs.getString("saircon"));
+               student.setSage(rs.getString("swindow"));
+               student.setSphone(rs.getString("sdoor"));
+               student.setSaddress(rs.getString("slight"));
             }
             DBUtil.realeaseAll();
             return student;
@@ -111,7 +111,7 @@ public class StudentDaoImpl implements StudentDao{
 
     @Override
     public List<Student> getStudentbyName(String name) {
-        String select="select * from student where sname='"+name+"'";
+        String select="select * from user where sname='"+name+"'";
         try {
             List<Student> students = new ArrayList<Student>();
             ResultSet rs=DBUtil.runQuery(select);
@@ -120,10 +120,10 @@ public class StudentDaoImpl implements StudentDao{
                Student student = new Student();
                student.setSid(rs.getInt("sid"));
                student.setSname(rs.getString("sname"));
-               student.setSnumber(rs.getString("snumber"));
-               student.setSage(rs.getInt("sage"));
-               student.setSphone(rs.getString("sphone"));
-               student.setSaddress(rs.getString("saddress"));
+               student.setSnumber(rs.getString("saircon"));
+               student.setSage(rs.getString("swindow"));
+               student.setSphone(rs.getString("sdoor"));
+               student.setSaddress(rs.getString("slight"));
                students.add(student);
             }
             DBUtil.realeaseAll();
@@ -136,7 +136,7 @@ public class StudentDaoImpl implements StudentDao{
 
     @Override
     public List<Student> getAllStudent() {
-        String select="select * from student";
+        String select="select * from user";
         try {
             List<Student> students = new ArrayList<Student>();
             ResultSet rs=DBUtil.runQuery(select);
@@ -145,10 +145,10 @@ public class StudentDaoImpl implements StudentDao{
                Student student = new Student();
                student.setSid(rs.getInt("sid"));
                student.setSname(rs.getString("sname"));
-               student.setSnumber(rs.getString("snumber"));
-               student.setSage(rs.getInt("sage"));
-               student.setSphone(rs.getString("sphone"));
-               student.setSaddress(rs.getString("saddress"));
+               student.setSnumber(rs.getString("saircon"));
+               student.setSage(rs.getString("swindow"));
+               student.setSphone(rs.getString("sdoor"));
+               student.setSaddress(rs.getString("slight"));
                students.add(student);
             }
             DBUtil.realeaseAll();

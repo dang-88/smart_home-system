@@ -6,19 +6,12 @@
 package studentapp.gui;
 
 
+import javax.swing.table.AbstractTableModel;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.table.AbstractTableModel;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
-import studentapp.dal.Entity.Student;
 
 /**
  *
